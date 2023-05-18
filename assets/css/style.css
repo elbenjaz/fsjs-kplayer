@@ -1,0 +1,154 @@
+@import url('https://fonts.cdnfonts.com/css/azonix');
+     
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Azonix", sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+    'menu menu'
+    'artists songs'
+    'footer footer';
+    background-color: #fcf3fd;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: #321478;
+    color: #fff;
+    padding: 20px;
+    
+    display: flex;
+    justify-content: space-between;    
+    align-items: center;
+}
+.menu span {
+    color: #a9e573;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+.artists {
+    grid-area: artists;
+    background-color: #fbf2fd;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+.artists ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+.artists ul li a {
+    border-radius: 30px;
+    padding: 15px 25px;
+    background-color: #fff;
+    margin: 10px 0;
+    color: #000;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: space-between;    
+    align-items: center;
+}
+.artists ul li a:hover {
+    background-color: #8c2dfa;
+    color: #fff;
+}
+.artists ul li a:focus {
+    background-color: #321478;
+    color: #fff;
+}
+.artists ul li a.active {
+    background-color: #321478;
+    color: #fff;
+}
+.artists ul li a label {
+    background-color: #fff;
+    color: #321478;
+    border: 1px #000 solid;
+    border-radius: 30px;
+    padding: 4px;
+    margin-left: 10px;
+}
+.artists ul li a.active label {
+    border: 0;
+}
+
+.songs {
+    grid-area: songs;
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: 300px;
+}
+.songs-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #dac4ff;
+    border-radius: 10px;
+    padding: 20px;
+    height: 260px;
+}
+.songs-item img {
+    border-radius: 10px;
+    width: 100%;
+}
+.songs-item div {
+    text-align: left;
+    margin: 10px 0;
+}
+.songs-item span {
+    text-align: right;
+    margin-top: auto;
+    color: #321478;
+}
+.songs-item a {
+    margin-top: auto;
+}
+.songs-item a,
+.songs-item a:visited {
+    color: #000;
+    background-color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 15px 25px;
+    border: 0;
+    border-radius: 30px;
+}
+.songs-item a:hover {
+    background-color: #8c2dfa;
+    color: #fff;
+}
+.songs-item a:focus {
+    background-color: #321478;
+    color: #fff;
+}
+
+footer {
+    grid-area: footer;
+    padding: 10px;
+    background-color: #321478;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
