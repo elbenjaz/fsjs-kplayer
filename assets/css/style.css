@@ -98,7 +98,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    grid-auto-rows: 300px;
+    grid-auto-rows: 340px;
 }
 .songs-item {
     display: flex;
@@ -107,7 +107,8 @@ body {
     background-color: #dac4ff;
     border-radius: 10px;
     padding: 20px;
-    height: 260px;
+    max-width: 300px;
+    height: 300px;
 }
 .songs-item img {
     border-radius: 10px;
